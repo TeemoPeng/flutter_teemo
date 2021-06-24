@@ -18,30 +18,43 @@ class _MyPage extends State{
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Column(
-        children: [
-          Text(
-            '我的',
-            style: TextStyle(
-              fontSize: 30
-            )
-          ),
-          FlatButton(
-            child: Text(
-              '设置',
-              style: TextStyle(
-                fontSize: 30
-              )
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('我的'),
+      ),
+      body: Container(
+        child: Column(
+          children: [
+            FlatButton(
+              child: Text(
+                '设置 statefulwidget',
+                style: TextStyle(
+                  fontSize: 30
+                )
+              ),
+              onPressed: (){
+                Navigator.of(context).pushNamed('setting'
+                );
+              },
             ),
-            onPressed: (){
-              Navigator.of(context).pushNamed('setting');
-            },
-          )
-        ],
-      )
-      
-      
+            FlatButton(
+              child: Text(
+                'Version statelessWidget',
+                style: TextStyle(
+                  fontSize: 30
+                )
+              ),
+              onPressed: (){
+                Navigator.of(context).pushNamed('version',
+                  arguments: {
+                    'text': '参数text'
+                  }
+                );
+              },
+            )
+          ],
+        )      
+      ),
     );
   }
 }

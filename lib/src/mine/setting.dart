@@ -1,22 +1,22 @@
-import 'dart:ffi';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:teemo/main.dart';
+import 'package:teemo/fonts/iconfont.dart';
 
 class Setting extends StatefulWidget{
   final String data;
-  Setting({this.data});
+  Setting({this.data, arguments});
 
   @override
-  State<StatefulWidget> createState(){
-    return _Setting({this.data});
+  State<StatefulWidget> createState() {
+    return _Setting();
   }
-
 }
 
 class _Setting extends State{
-  _Setting(Set<String> set);
+
+  /// 获取路由参数
+  get args => ModalRoute.of(context).settings.arguments;
 
   @override
   void initState(){
@@ -24,18 +24,38 @@ class _Setting extends State{
   }
   @override
   Widget build(BuildContext context){
-    return Container(
-      color: Colors.white,
-      child: FlatButton(
-        child: Text('设置页面',
-          style: TextStyle(color: Colors.blue),
+    String params = '';
+    if (args != null) {
+      params = args['data'];
+    }
+    print(' 参数：$params');
+
+    return Scaffold(
+      appBar: AppBar(
+        leading: IconButton(
+          icon:  Icon(
+            IconFont.icon_arrow,
+          ),
+          onPressed: (){
+            Navigator.of(context).pop();
+          },
         ),
-        onPressed: (){
-          Navigator.of(context).push(
-            MaterialPageRoute(builder: (context) => RootApp())
-          );
-        },
-      )
-    );
+        title: Text(
+          '设置'
+        ),
+      ),
+      body: Column(
+        children: [
+          TextButton(
+            child: Text('设置页面',
+              style: TextStyle(color: Colors.blue),
+            ),
+            onPressed: (){
+              Navigator.of(context).pushNamed('home');
+            },
+          ),
+        ]
+      ),
+    );    
   }
 }
