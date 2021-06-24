@@ -6,7 +6,7 @@ import 'package:teemo/src/mine/version.dart';
 
 final Map<String, WidgetBuilder> appRoutes = {
   'home': (context) => RootApp(),
-  'setting': (context,{ arguments }) => Setting(arguments: arguments),
+  'setting': (context) => Setting(),
   'mine': (context) => MyPage(),
-  'version': (context, {arguments}) => Version(arguments: arguments)
+  'version': (context) => Version()
 };

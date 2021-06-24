@@ -47,7 +47,7 @@ class _Setting extends State{
       body: Column(
         children: [
           TextButton(
-            child: Text('设置页面',
+            child: Text('设置页面 参数：$params',
               style: TextStyle(color: Colors.blue),
             ),
             onPressed: (){

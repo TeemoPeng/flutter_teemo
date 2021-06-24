@@ -12,7 +12,7 @@ class MyPage extends StatefulWidget{
 class _MyPage extends State{
   @override
   void initState() {
-    print('___________________ mypage init _______________');
+    print('--- mypage init ---');
     super.initState();
   }
 
@@ -33,7 +33,10 @@ class _MyPage extends State{
                 )
               ),
               onPressed: (){
-                Navigator.of(context).pushNamed('setting'
+                Navigator.of(context).pushNamed('setting',
+                  arguments: {
+                    "data": 'saldalsdl'
+                  }
                 );
               },
             ),

@@ -11,7 +11,7 @@ class IndexPage extends StatefulWidget{
 class _IndexPage extends State{
   @override
   void initState() {
-    print('___________________ indexpage init _______________');
+    print('--- indexpage init ---');
     super.initState();
   }
 
