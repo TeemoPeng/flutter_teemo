@@ -10,13 +10,13 @@ flutter run
 
 #### Android
 
-    1. 在 luoyang_laojiu\android\app\src\main\res 下对应的文件夹（mipmap-hdpi、mipmap-mdpi。。。）添加图片
-    2. luoyang_laojiu\android\app\src\main\AndroidManifest.xml 修改引用的图片路径
+    1. 在 \android\app\src\main\res 下对应的文件夹（mipmap-hdpi、mipmap-mdpi。。。）添加图片
+    2. \android\app\src\main\AndroidManifest.xml 修改引用的图片路径
 
 #### iOS
 
-    1. 在 luoyang_laojiu\ios\Runner\Assets.xcassets\AppIcon.appiconset 修改图片文件
-    2. 在 luoyang_laojiu\ios\Runner\Assets.xcassets\AppIcon.appiconset\Contents.json 修改引用文件
+    1. 在 \ios\Runner\Assets.xcassets\AppIcon.appiconset 修改图片文件
+    2. 在 \ios\Runner\Assets.xcassets\AppIcon.appiconset\Contents.json 修改引用文件
 
 ## Iconfont 使用方法
 
@@ -30,6 +30,12 @@ flutter run
                 - asset: assets/fonts/iconfont.ttf
     5. 使用： Icon(Iconfont.icon_arrow)
 
-## 网络请求
+## 网络请求 Dio
 
-## 打包
+## 文件上传
+
+## 本地数据存储 shared_preferences
+
+## 打包、升级
+
+## 微信支付、支付宝支付
